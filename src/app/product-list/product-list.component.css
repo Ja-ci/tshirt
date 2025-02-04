@@ -1,0 +1,28 @@
+.products { 
+    padding: 30px; 
+    text-align: center; 
+}
+.product-grid { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+.product-card { 
+    width: 200px; 
+    border: 1px solid #ddd; 
+    padding: 15px; 
+    text-align: center; 
+}
+img { 
+    width: 100%; 
+    height: auto; 
+}
+.btn { 
+    display: block; 
+    margin-top: 10px; 
+    background: #ff5722; 
+    color: white; padding: 
+    5px; text-decoration: none; 
+    border-radius: 5px; 
+}

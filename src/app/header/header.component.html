@@ -1,0 +1,22 @@
+<nav>
+    <div class="nav-container">
+      <div class="name">
+        <span><a class="contact-box" routerLink="/home" routerLinkActive="active"(click)="closeMenu()">Tshirt <span class="highlight">Empire</span></a></span>
+      </div>
+  
+      <!-- Burger menu for small screens -->
+      <div class="burger-menu" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  
+    <ul class="navigation" [class.active]="menuOpen">
+      <li><a class="contact-box" routerLink="/home" routerLinkActive="active"(click)="closeMenu()">HOME</a></li>
+      <li><a class="contact-box" routerLink="/about" routerLinkActive="active" fragment="about" (click)="closeMenu()">ABOUT</a>
+      </li>
+      <li><a class="contact-box" routerLink="products" routerLinkActive="active" fragment="products" (click)="closeMenu()">PRODUCTS</a></li>
+    </ul>
+</nav>
+  

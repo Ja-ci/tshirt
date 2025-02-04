@@ -1,0 +1,132 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    z-index: 6;
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Move the burger menu to the right */
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+    /* Push the burger menu to the right */
+    z-index: 5;
+  }
+  
+  .burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    display: block;
+  }
+  
+  .name {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+  }
+  
+  .name span {
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  
+  .name span .highlight {
+    color: red;
+  }
+  .name  a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 5rem;
+    list-style-type: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .navigation a:hover {
+    color: red;
+  }
+  
+  .navigation a.active {
+    color: red;
+    text-decoration: underline;
+  }
+  
+  /* Hide navigation links on small screens */
+  @media (max-width: 768px) {
+    .navigation {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      flex-direction: column;
+      background-color: grey;
+      padding: 30px;
+      border-radius: 7px;
+      gap: 1rem;
+      z-index: 7;
+    }
+  
+    .navigation.active {
+      display: flex;
+    }
+  
+    /* Show the burger menu icon */
+    .burger-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 5;
+    }
+  
+    .burger-menu span {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      display: block;
+    }
+  }
+  
+  /* Ensure header scales on larger screens */
+  @media (min-width: 1024px) {
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .navigation {
+      margin-right: 50px;
+    }
+  }
+  

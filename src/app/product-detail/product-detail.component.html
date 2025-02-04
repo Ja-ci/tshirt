@@ -1,0 +1,8 @@
+<section class="product-detail" *ngIf="product">
+    <img [src]="product.image" [alt]="product.name">
+    <div>
+      <h2>{{ product.name }}</h2>
+      <p>\${{ product.price }}</p>
+      <p>{{ product.description }}</p>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+.product-detail { 
+    display: flex; 
+    gap: 20px; 
+    padding: 30px; 
+    align-items: center; 
+}
+img { 
+    width: 300px; 
+    height: auto; 
+}

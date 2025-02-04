@@ -1,0 +1,13 @@
+.hero { 
+    text-align: center; 
+    padding: 50px; 
+    background: url('/assets/banner.jpg') center/cover no-repeat; 
+    color: grey; 
+}
+.btn { 
+    background: #ff5722; 
+    padding: 10px 20px; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
