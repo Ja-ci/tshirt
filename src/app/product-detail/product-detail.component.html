@@ -1,8 +1,52 @@
-<section class="product-detail" *ngIf="product">
-    <img [src]="product.image" [alt]="product.name">
-    <div>
-      <h2>{{ product.name }}</h2>
-      <p>\${{ product.price }}</p>
-      <p>{{ product.description }}</p>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product-detail.component.css">
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>Order</h1>
+    </section>
+
+    <section class="order">
+      <div class="name-group">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" formControlName="firstName" class="input-field" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" formControlName="lastName" class="input-field" placeholder="Last Name">
+          </div>
+      </div>
+      <div class="contact-info-group">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email" class="input-field" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" formControlName="phone" class="input-field" placeholder="Phone">
+          </div>
+      </div>
+      <section class="product-detail" *ngIf="product">
+        <img [src]="product.image" [alt]="product.name">
+        <div>
+          <h2>{{ product.name }}</h2>
+          <p>${{ product.price }}</p>
+          <p>{{ product.description }}</p>
+        </div>
+      </section>
+      <div class="form-footer">
+          <button type="submit" class="btn">Place Order</button>
+      </div>
+    </section>
+
+</body>
+</html>
+
