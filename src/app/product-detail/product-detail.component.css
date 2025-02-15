@@ -1,10 +1,114 @@
-.product-detail { 
-    display: flex; 
-    gap: 20px; 
-    padding: 30px; 
-    align-items: center; 
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-img { 
-    width: 300px; 
-    height: auto; 
+
+/* Hero Section */
+.hero {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: red solid 1px;
+}
+
+/* Order Form Section */
+.order {
+    background: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Name & Contact Info Group */
+.name-group, .contact-info-group {
+    display: flex;
+    gap: 10px;
+}
+
+.name-group .form-group,
+.contact-info-group .form-group {
+    flex: 1;
+}
+
+/* Product Detail Section */
+.product-detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.product-detail img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-detail h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.product-detail p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Button */
+.btn {
+    width: 30%;
+    background-color: grey;
+    color: white;
+    padding: 12px;
+    margin-left: 35%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .name-group, .contact-info-group {
+        flex-direction: column;
+    }
+
+    .product-detail {
+        flex-direction: column;
+        text-align: center;
+    }
 }
