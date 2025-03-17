@@ -4,7 +4,7 @@
       <div *ngFor="let product of products" class="product-card">
         <img [src]="product.image" [alt]="product.name">
         <h3>{{ product.name }}</h3>
-        <p>${{ product.price }}</p>
+        <p>Ksh{{ product.price }}</p>
         <a [routerLink]="['/product', product.id]" class="btn">Order Now</a>
       </div>
     </div>
