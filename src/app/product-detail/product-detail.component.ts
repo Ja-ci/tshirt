@@ -5,6 +5,8 @@ import { ProductService } from '../services/product.service';
 import { Product } from '../models/product.model';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
+declare var paypal: any;
+
 @Component({
   selector: 'app-product-detail',
   standalone: true,
@@ -15,6 +17,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class ProductDetailComponent implements OnInit {
   product: Product | undefined;
   orderForm!: FormGroup;
+  
 
   constructor(
     private route: ActivatedRoute,
@@ -33,6 +36,35 @@ export class ProductDetailComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required]
     });
+
+    this.loadPayPal();
+  }
+
+  
+  loadPayPal() {
+    if (!this.product) return;
+  
+  paypal.Buttons({
+    createOrder: (data: any, actions: any) => {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: this.product?.price
+          }
+        }]
+      });
+    },
+    onApprove: async (data: any, actions: any) => {
+      const order = await actions.order.capture();
+      console.log('Payment Successful', order);
+      this.sendEmail(); // Send order email after successful payment
+      alert('Payment Successful! Your order has been placed.');
+    },
+    onError: (err: any) => {
+      console.error('PayPal Error', err);
+      alert('Payment failed. Please try again.');
+    }
+  }).render('#paypal-button-container');
   }
 
   placeOrder() {

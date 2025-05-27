@@ -85,16 +85,17 @@ label {
 
 /* Button */
 .btn {
-    width: 30%;
-    background-color: blue;
+    width: 35%;
+    background-color: grey;
     color: white;
     padding: 12px;
-    margin-left: 35%;
+    margin-left: 30%;
     font-size: 1rem;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
+    margin-bottom: 20px;
 }
 
 .btn:hover {
