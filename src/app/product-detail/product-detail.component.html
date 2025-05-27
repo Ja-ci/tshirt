@@ -36,7 +36,8 @@
     </section>
 
     <div class="form-footer">
-      <button class="btn" [disabled]="orderForm.invalid" (click)="sendEmail()">Place Order</button>
+      <button class="btn" [disabled]="orderForm.invalid" (click)="sendEmail()">Pay & Place Order</button>
+      <div id="paypal-button-container"></div>
     </div>
   </form>
 </section>
