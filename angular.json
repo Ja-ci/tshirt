@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-tshirt",
+            "outputPath": "dist/my-tshirt/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -35,6 +35,7 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "dist/my-tshirt/browser",
               "budgets": [
                 {
                   "type": "initial",
