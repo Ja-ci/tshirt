@@ -22,3 +22,11 @@ body, html {
     border-radius: 5px; 
 }
 
+@media (max-width: 768px){
+    .hero{
+        padding: 300px 20px 0 0;
+        text-align: center;
+        white-space: nowrap;
+        background-position: top 0 right -160px;
+    }
+}

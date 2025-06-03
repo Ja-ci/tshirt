@@ -89,7 +89,7 @@ export class ProductDetailComponent implements OnInit {
                     Product: ${productName}%0A
                     Price: $${productPrice}`;
 
-      const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      const mailtoLink = `mailto:jacintacharles75@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
       window.location.href = mailtoLink;
     } else {
