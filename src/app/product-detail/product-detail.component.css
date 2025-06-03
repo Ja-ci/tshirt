@@ -102,8 +102,8 @@ label {
     background-color: #0056b3;
 }
 
-/* Responsive Design */
-@media (max-width: 500px) {
+
+@media (max-width: 768px) {
     .name-group, .contact-info-group {
         flex-direction: column;
     }
@@ -111,5 +111,9 @@ label {
     .product-detail {
         flex-direction: column;
         text-align: center;
+    }
+
+    .btn {
+        width: 45%;
     }
 }
